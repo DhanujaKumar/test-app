@@ -2,13 +2,21 @@ body{
     background-color:#002855;
 
 }
+.outer-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
 .main{
     margin-top: 300px;
     text-align: center;
     color:aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100px;
+    justify-content: center;
 }
-.button{
+.btn{
     margin-left: auto;
     margin-right: 20px;
     padding: 10px 20px;
@@ -21,7 +29,11 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.btn:hover {
     transform: scale(1.1); 
     cursor: pointer;       
+}
+.para{
+    text-align:center;
+    justify-content: center;
 }
