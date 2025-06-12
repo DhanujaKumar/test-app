@@ -22,6 +22,10 @@ export default function Index() {
 <Link href="/contact" passHref>
   <button className="btn">Conatct</button>
 </Link>
+<Link href="/ai-interface">
+  <button className="btn">Ask AI Assistant</button>
+</Link>
+
     </div>
 
 
