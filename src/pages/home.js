@@ -1,16 +1,17 @@
-//import Link from 'next/link';
+import Link from 'next/link';
+// import GstApproval from '@/components/gstApproval'; // Unused, remove for now
 
-export default function home() {
+export default function Home() {
   return (
     <div className='whole'>
+      <div className="top">
+        <img src="TamilNadu_Logo.svg.png" className="image" alt="Tamil Nadu Logo" />
+        <p className="title">
+          <b>GovEase: Simplifying Government Approvals Through A Unified Digital Interface</b>
+        </p>
+        <button className="login">Login</button>
+      </div>
 
-    <div className="top">
-      <img src="TamilNadu_Logo.svg.png" className="image" alt="Tamil Nadu Logo" />
-      <p className="title">
-        <b>GovEase: Simplifying Government Approvals Through A Unified Digital Interface</b>
-      </p>
-      <button className="login">Login</button>
-</div>
       <div className="bottom">
         <div className="about">
           <b style={{ color: "#010e1d" }}>What does GovEase provide?</b>
@@ -65,7 +66,9 @@ export default function home() {
 
         <div className="menu">
           <div className="row">
-            <div className="list1">GST Approval</div>
+            <Link href="/gstApproval">
+              <div className="list1">GST Approval</div>
+            </Link>
             <div className="list1">DTCP Approval</div>
           </div>
           <div className="row">
@@ -74,6 +77,6 @@ export default function home() {
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 }

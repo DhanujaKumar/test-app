@@ -161,3 +161,64 @@
             text-align:justify;
         }
 
+.gst-container {
+  padding: 30px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  color: #002855;
+  margin-bottom: 30px;
+}
+
+.gst-form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gst-form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #002855;
+  font-weight: 600;
+}
+
+.gst-form input,
+.gst-form select,
+.gst-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gst-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #002855;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gst-form button:hover {
+  background-color: #00509e;
+}
+
+.success-msg {
+  text-align: center;
+  color: green;
+  margin-top: 20px;
+  font-weight: bold;
+}
