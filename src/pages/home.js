@@ -72,7 +72,9 @@ export default function Home() {
             <div className="list1">DTCP Approval</div>
           </div>
           <div className="row">
-            <div className="list1">Registration as StartUp</div>
+            <Link href="/startup">
+              <div className="list1">Startup Registration</div>
+            </Link>            
             <div className="list1">Udhayam Registration</div>
           </div>
         </div>

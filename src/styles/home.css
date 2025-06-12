@@ -222,3 +222,59 @@
   margin-top: 20px;
   font-weight: bold;
 }
+.startup-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.startup-form {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.startup-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.startup-form input,
+.startup-form select,
+.startup-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.startup-form button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.startup-form button:hover {
+  background-color: #0055aa;
+}
+
+
+
