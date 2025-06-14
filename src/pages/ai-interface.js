@@ -3,13 +3,22 @@ import { useState } from "react";
 export default function AiInterface() {
   const [input, setInput] = useState("");
   const [response, setResponse] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
+    if (!input.trim()) {
+      setResponse("Please enter a question.");
+      return;
+    }
+
+    setLoading(true);
+    setResponse(""); // clear previous response
+
     try {
       const res = await fetch("/api/ai", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ input }), // use `input` from state
+        body: JSON.stringify({ input }),
       });
 
       const data = await res.json();
@@ -24,12 +33,15 @@ export default function AiInterface() {
       }
     } catch (err) {
       setResponse("Request failed: " + err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="ai-container">
       <h2 className="ai-title">GovEase AI Assistant</h2>
+      
       <textarea
         className="ai-textarea"
         rows={4}
@@ -37,13 +49,17 @@ export default function AiInterface() {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Ask something about government approvals..."
       />
-      <button className="ai-button" onClick={handleSubmit}>
-        Ask AI
+
+      <button className="ai-button" onClick={handleSubmit} disabled={loading}>
+        {loading ? "Thinking..." : "Ask AI"}
       </button>
-      <div className="ai-response">
-        <strong>Response:</strong>
-        <p>{response}</p>
-      </div>
+
+      {response && (
+        <div className="ai-response">
+          <strong>Response:</strong>
+          <p>{response}</p>
+        </div>
+      )}
     </div>
   );
 }
